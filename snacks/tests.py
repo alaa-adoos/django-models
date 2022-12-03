@@ -21,3 +21,4 @@ class Snakstest(TestCase):
         url=reverse('snacks')
         respones=self.client.get(url)
         self.assertTemplateUsed(respones,'snack_list.html')
+    
