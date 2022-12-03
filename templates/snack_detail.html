@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1 style="text-align: center;">Snacks</h1>
-{% for snacks in object_list %}
+
  <div class="card">
   <h4>{{snacks.name}}</h4>
   <img src="{{snacks.image_url}}" alt="" style="width:20%"> 
-  <button><a href="{% url 'detail' snacks.id %}">show detail</a></button> 
+  <h3>{{snacks.description}}</h3>
+  <h2>{{snacks.purchaser}}</h2>
+  <button><a href="{% url 'home' %}">back to home</a></button> 
+  
 </div>
 
-{% endfor %}
 {% endblock %}
